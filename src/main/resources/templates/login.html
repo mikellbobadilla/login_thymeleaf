@@ -32,7 +32,11 @@
     <form class="row g-3" th:action="@{/login}" th:object="${authRequest}" method="post">
 
         <div th:if="${message}">
-            <h2 class="text-danger" th:text="${message}" />
+            <p class="text-success text-center" th:text="${message}" />
+        </div>
+
+        <div th:if="${error}">
+            <p class="text-success text-center" th:text="${error}" />
         </div>
 
         <h2 class="fs-1 text-center">Login</h2>
@@ -58,7 +62,7 @@
         </div>
         <p class="mt-5 text-muted text-center">
             &copy; 2023 mikell bobadilla<br />
-            <strong><a class="text-muted" href="">Link to proyect</a></strong>
+            <strong><a class="text-muted" href="https://github.com/mikellbobadilla/login_thymeleaf" target="_blank">Link to project</a></strong>
         </p>
     </form>
 
