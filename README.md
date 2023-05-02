@@ -51,3 +51,27 @@ Luego de que la base de datos este corriendo solo tenes que iniciar el proyecto:
 mvn spring-boot:run
 ```
 
+**Si tenes Docker**
+
+lo primero que tenes que hacer es compilar la **App**
+
+```shell
+mvn clean # para limpiar datos que no se necesitan
+mvn install # para compilar y generar el archivo .jar
+```
+
+si correctamente compilo la app ya podemos generar la imagen de **Docker**
+
+```shell
+# Si estas en linux es necesario ejecutarlo con sudo
+docker build -t login_app:1.0.0 .
+
+docker image ls # Para ver si correctamente tenemos la imagen
+```
+
+Si vemos que la imagen se genero correctamente, ahora solo queda correr el **docker-compose**
+
+```shell
+# Linux en modo sudo
+docker-compose up -d
+```
