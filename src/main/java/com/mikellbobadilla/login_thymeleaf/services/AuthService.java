@@ -8,6 +8,9 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 @Service
 public class AuthService {
 
@@ -27,6 +30,7 @@ public class AuthService {
       RoleUser.USER
     );
     User u = userRepository.save(user);
+    Logger.getLogger(AuthService.class.getName()).log(Level.INFO, "User was created");
     return "User created!";
   }
 }

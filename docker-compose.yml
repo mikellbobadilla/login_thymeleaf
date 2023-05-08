@@ -14,7 +14,7 @@ services:
       - mysql_db:/var/lib/mysql
 
   login_app:
-    image: login_app:1.0.0
+    image: login_app:1.0.1
     container_name: app_login
     environment:
       MYSQL_HOST: db

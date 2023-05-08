@@ -61,10 +61,4 @@ public class AuthController {
     return "redirect:/register";
   }
 
-  @ExceptionHandler(BadCredentialsException.class)
-  public String errorCredentials(AuthenticationException exc, RedirectAttributes redirectAttributes){
-    Logger.getLogger(AuthController.class.getName()).log(Level.WARNING, "App Message: " + exc.getMessage());
-    redirectAttributes.addFlashAttribute("error","Bad Credentials");
-    return "/login";
-  }
 }

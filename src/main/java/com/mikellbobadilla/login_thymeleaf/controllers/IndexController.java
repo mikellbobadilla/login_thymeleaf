@@ -25,4 +25,6 @@ public class IndexController {
     return "index";
   }
 
+//  Este controlador ya fue removido
+
 }

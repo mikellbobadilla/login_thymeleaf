@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org">
 
+<html xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sf="http://www.w3.org/1999/xhtml" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,11 +32,11 @@
     <form class="row g-3" th:action="@{/login}" th:object="${authRequest}" method="post">
 
         <div th:if="${message}">
-            <p class="text-success text-center" th:text="${message}" />
+            <p class="text-success text-center" th:text="${message}"></p>
         </div>
 
-        <div th:if="${error}">
-            <p class="text-success text-center" th:text="${error}" />
+        <div th:if="${param.error}">
+            <p class="text-danger text-center" th:text="'Credenciales Incorrectas'"></p>
         </div>
 
         <h2 class="fs-1 text-center">Login</h2>
