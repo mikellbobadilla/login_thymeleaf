@@ -13,7 +13,7 @@ services:
       - mysql_db:/var/lib/mysql
 
   login_app:
-    image: login_app:1.0.1
+    image: stingnakamura/app_login:1.0.0
     container_name: app_login
     environment:
       MYSQL_HOST: db
