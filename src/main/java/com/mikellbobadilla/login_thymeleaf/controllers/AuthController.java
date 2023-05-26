@@ -35,11 +35,6 @@ public class AuthController {
     return "login";
   }
 
-  public String login(@ModelAttribute AuthRequest authRequest){
-
-    return "redirect:/";
-  }
-
   @GetMapping("/register")
   public String registerPage(Model model){
     RegisterRequest registerRequest = new RegisterRequest();
